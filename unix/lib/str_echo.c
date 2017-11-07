@@ -8,6 +8,7 @@ str_echo(int sockfd)
 
 again:
 	while ( (n = read(sockfd, buf, MAXLINE)) > 0)
+        //把客户端发送的数据再返回去
 		Writen(sockfd, buf, n);
 
 	if (n < 0 && errno == EINTR)

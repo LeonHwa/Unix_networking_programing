@@ -9,7 +9,7 @@ signal(int signo, Sigfunc *func)
 	act.sa_handler = func;
 	sigemptyset(&act.sa_mask);
 	act.sa_flags = 0;
-	if (signo == SIGALRM) {
+	if (signo == SIGALRM) {/* alarm clock */
 #ifdef	SA_INTERRUPT
 		act.sa_flags |= SA_INTERRUPT;	/* SunOS 4.x */
 #endif
