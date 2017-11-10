@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35391F2E1FB54C77007C546B /* lh.c in Sources */ = {isa = PBXBuildFile; fileRef = 35391F2C1FB54C77007C546B /* lh.c */; };
 		35E888ED1FB16B85000017DE /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 35E888EC1FB16B85000017DE /* main.c */; };
 		35E889391FB16C58000017DE /* sock_ntop.c in Sources */ = {isa = PBXBuildFile; fileRef = 35E888F41FB16B8D000017DE /* sock_ntop.c */; };
 		35E8893A1FB16C58000017DE /* gf_time.c in Sources */ = {isa = PBXBuildFile; fileRef = 35E888F61FB16B8D000017DE /* gf_time.c */; };
@@ -84,6 +85,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		35391F2C1FB54C77007C546B /* lh.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lh.c; path = unix/lh.c; sourceTree = SOURCE_ROOT; };
+		35391F2D1FB54C77007C546B /* lh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lh.h; path = unix/lh.h; sourceTree = SOURCE_ROOT; };
 		35E888E91FB16B85000017DE /* Unix */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Unix; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E888EC1FB16B85000017DE /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		35E888F41FB16B8D000017DE /* sock_ntop.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sock_ntop.c; sourceTree = "<group>"; };
@@ -190,6 +193,8 @@
 			children = (
 				35E889761FB16DFC000017DE /* 4-1.png */,
 				35E888EC1FB16B85000017DE /* main.c */,
+				35391F2C1FB54C77007C546B /* lh.c */,
+				35391F2D1FB54C77007C546B /* lh.h */,
 			);
 			path = Unix;
 			sourceTree = "<group>";
@@ -358,6 +363,7 @@
 				35E889561FB16C58000017DE /* wraplib.c in Sources */,
 				35E889571FB16C58000017DE /* wrappthread.c in Sources */,
 				35E889581FB16C58000017DE /* read_fd.c in Sources */,
+				35391F2E1FB54C77007C546B /* lh.c in Sources */,
 				35E889591FB16C58000017DE /* signal_intr.c in Sources */,
 				35E8895A1FB16C58000017DE /* sock_bind_wild.c in Sources */,
 				35E8895B1FB16C58000017DE /* udp_client.c in Sources */,
@@ -501,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -509,6 +516,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

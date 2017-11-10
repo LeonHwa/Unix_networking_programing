@@ -9,9 +9,19 @@
  */
 #include <stdio.h>
 #include "unp.h"
+#include "lh.h"
 
+
+void tcpserver();
+void tcpclient();
 //  TCP 并发服务器程序（参照4.7， 4.8，5.2节）
 int main(int argc, const char * argv[]) {
+    tcpserver(); 
+    return 0;
+}
+
+void
+tcpserver(){
     int listenfd,connfd;
     pid_t childPid;
     socklen_t clilen;
@@ -37,17 +47,19 @@ int main(int argc, const char * argv[]) {
         }
         Close(connfd);//父进程关闭 已连接的客户套接字
     }
-    
-    return 0;
+
 }
-
-
-/**   posix 信号处理
- 信号由进程发给进程，或者内核发给进程
- 
- 
- */
 void
-ss(){
-    signal(<#int#>, <#void (*)(int)#>)
+tcpclient(){
+    int sockfd;
+    struct sockaddr_in servaddr;
+    sockfd = Socket(AF_INET, SOCK_STREAM, 0);
+    bzero(&servaddr, sizeof(servaddr));
+    servaddr.sin_family = AF_INET;
+    servaddr.sin_port = htons(SERV_PORT);
+    inet_pton(AF_INET, INADDR_ANY, &servaddr.sin_addr);
+    Connect(sockfd, (SA *)&servaddr, sizeof(servaddr));
+    lh_str_echo(stdin, sockfd);
+    exit(0);
 }
+
