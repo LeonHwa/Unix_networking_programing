@@ -45,7 +45,7 @@ tcpserver(){
             //process the request ...
             str_echo(connfd);
         }
-        Close(connfd);//父进程关闭 已连接的客户套接字
+        Close(connfd);//父进程关闭 已连接的客户套接字 close把引用计数减1，变0时才关闭套接字
     }
 
 }
@@ -59,7 +59,7 @@ tcpclient(){
     servaddr.sin_port = htons(SERV_PORT);
     inet_pton(AF_INET, INADDR_ANY, &servaddr.sin_addr);
     Connect(sockfd, (SA *)&servaddr, sizeof(servaddr));
-    lh_str_echo(stdin, sockfd);
+    lh_cli_str_echo(stdin, sockfd);
     exit(0);
 }
 

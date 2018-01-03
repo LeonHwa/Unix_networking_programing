@@ -10,5 +10,5 @@
 #define lh_h
 
 #include <stdio.h>
-void lh_str_echo(FILE *fp,int sockfd);
+void lh_cli_str_echo(FILE *fp,int sockfd);
 #endif /* lh_h */

@@ -87,6 +87,7 @@
 /* Begin PBXFileReference section */
 		35391F2C1FB54C77007C546B /* lh.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = lh.c; path = unix/lh.c; sourceTree = SOURCE_ROOT; };
 		35391F2D1FB54C77007C546B /* lh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lh.h; path = unix/lh.h; sourceTree = SOURCE_ROOT; };
+		35554CB11FB58C5B0032C7FB /* TCP_handshack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TCP_handshack.png; sourceTree = "<group>"; };
 		35E888E91FB16B85000017DE /* Unix */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Unix; sourceTree = BUILT_PRODUCTS_DIR; };
 		35E888EC1FB16B85000017DE /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		35E888F41FB16B8D000017DE /* sock_ntop.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = sock_ntop.c; sourceTree = "<group>"; };
@@ -192,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				35E889761FB16DFC000017DE /* 4-1.png */,
+				35554CB11FB58C5B0032C7FB /* TCP_handshack.png */,
 				35E888EC1FB16B85000017DE /* main.c */,
 				35391F2C1FB54C77007C546B /* lh.c */,
 				35391F2D1FB54C77007C546B /* lh.h */,
